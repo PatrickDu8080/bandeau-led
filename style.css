@@ -1,0 +1,139 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #10131c;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 520px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 25px 0;
+}
+
+.logo {
+    font-size: 48px;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #9ca3af;
+}
+
+.card {
+    background: #1c2230;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 18px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+#status {
+    color: #ff7777;
+    font-weight: bold;
+}
+
+#status.connected {
+    color: #55e6a5;
+}
+
+.connection p {
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 13px;
+    background: #6959e8;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+.secondary {
+    background: #394153;
+}
+
+.power {
+    width: 100%;
+    background: #e8a52f;
+    color: #181818;
+}
+
+.animations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.animations button {
+    min-height: 55px;
+}
+
+.range-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #aeb6c7;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.range-label strong {
+    color: white;
+    font-size: 18px;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #9585ff;
+}
+
+#log {
+    max-height: 150px;
+    overflow-y: auto;
+    font-size: 12px;
+    color: #aeb6c7;
+}
+
+#log div {
+    padding: 5px 0;
+    border-bottom: 1px solid #30394b;
+}
+
+footer {
+    text-align: center;
+    color: #778092;
+    font-size: 12px;
+    padding: 20px;
+}

@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bandeau LED</title>
+
+    <meta name="theme-color" content="#10131c">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>Bandeau LED</h1>
+            <p>Contrôle Bluetooth de Noël</p>
+        </header>
+
+        <section class="connection card">
+            <div>
+                <span id="status">Déconnecté</span>
+                <p>Raspberry Pi Pico</p>
+            </div>
+
+            <div class="buttons">
+                <button onclick="connect()">Connecter</button>
+                <button class="secondary" onclick="disconnect()">
+                    Déconnecter
+                </button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Éclairage</h2>
+            <button class="power" onclick="sendCmd('toggle')">
+                Marche / Arrêt
+            </button>
+        </section>
+
+        <section class="card">
+            <h2>Animations</h2>
+
+            <div class="animations">
+                <button onclick="setAnimation('twinkle')">
+                    Twinkle
+                </button>
+
+                <button onclick="setAnimation('chase')">
+                    Chase
+                </button>
+
+                <button onclick="setAnimation('tricolor')">
+                    Tricolor
+                </button>
+
+                <button onclick="setAnimation('rainbow')">
+                    Rainbow
+                </button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Vitesse</h2>
+
+            <div class="range-label">
+                <span>Lent</span>
+                <strong id="speedValue">50</strong>
+                <span>Rapide</span>
+            </div>
+
+            <input
+                type="range"
+                min="1"
+                max="100"
+                value="50"
+                oninput="setSpeed(this.value)"
+            >
+        </section>
+
+        <section class="card">
+            <h2>Luminosité</h2>
+
+            <div class="range-label">
+                <span>0 %</span>
+                <strong id="brightnessValue">100%</strong>
+                <span>100 %</span>
+            </div>
+
+            <input
+                type="range"
+                min="0"
+                max="100"
+                value="100"
+                oninput="setBrightness(this.value)"
+            >
+        </section>
+
+        <section class="card">
+            <h2>Journal Bluetooth</h2>
+            <div id="log"></div>
+        </section>
+
+        <footer>
+            Bandeau LED • Bluetooth Low Energy
+        </footer>
+
+    </main>
+
+</body>
+</html>
